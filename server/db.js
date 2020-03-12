@@ -1,10 +1,8 @@
-// did not have enough time to dedicate to learning mongoDB yet
-
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-  user: 'root',
-  password: '',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
   database: 'connectFour'
 });
 
