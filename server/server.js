@@ -10,6 +10,6 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use('/api', router);
 
-module.exports.app = app;
 app.listen(process.env.PORT || 8080, () => console.log('Listening on port 8080!'));
+module.exports.app = app;
 
