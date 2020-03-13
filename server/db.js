@@ -1,9 +1,10 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
+  host: process.env.DB_HOST,
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
-  database: 'heroku_d6c878d67fe5ca4'
+  database: process.env.DB_DATABASE || 'connectFour'
 });
 
 db.connect();
